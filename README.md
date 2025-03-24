@@ -113,6 +113,6 @@ python test.py --cfg_file --cfg_file ./cfgs/kitti_models/voxt_dgcnn.yaml --ckpt 
 
 ### 7. Acknowledgement
 - This project is built on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet). 
-- Some codes are from PyG(https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.conv.DynamicEdgeConv.html#torch_geometric.nn.conv.DynamicEdgeConv) and VoxSeT(https://github.com/skyhehe123/VoxSeT).
+- Some codes are from [PyG](https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.conv.DynamicEdgeConv.html#torch_geometric.nn.conv.DynamicEdgeConv) and [Voxel Set Transformer](https://github.com/skyhehe123/VoxSeT).
 
 
