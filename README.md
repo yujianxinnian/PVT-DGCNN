@@ -110,7 +110,7 @@ python test.py --cfg_file --cfg_file ./cfgs/kitti_models/voxt_dgcnn.yaml --ckpt 
 - To address the ultra-scale characteristics of Waymo1.2.0(https://waymo.com/open/) - whose data volume exceeds KITTI by over 20× with per-frame point cloud spatial coverage approximately 6× larger - we implemented optimized trade-offs in experimental design under computational resource constraints. Specifically, we strictly adhered to OpenPCDet(https://github.com/open-mmlab/OpenPCDet) framework conventions by utilizing approximately 20% of all training samples. For performance evaluation, comprehensive testing on the official WOD validation set was conducted, with rigorous computation of both AP and APH following the dual-difficulty-level (L1/L2) evaluation protocol, ensuring the authority and comparability of experimental results.
 - "tools\cfgs\waymo_models\voxt_sgcnn.yaml", "voxt_sgcnn_two_stage_car&cyclist.yaml", and "voxt_ecovgnn_two_stage_pedestrian.yaml" uses static graph convolution (with less latency) for training
 
-### 7. Acknowledgement
+### 8. Acknowledgement
 - This project is built on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet). 
 - Some codes are from [PyG](https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.conv.DynamicEdgeConv.html#torch_geometric.nn.conv.DynamicEdgeConv) and [Voxel Set Transformer](https://github.com/skyhehe123/VoxSeT).
 
