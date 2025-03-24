@@ -7,8 +7,12 @@
 This project is built on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet). 
 
 ## Introduction
-<img src="diagram.png" alt="drawing" width="900" height="400"/>
-This study proposes a Transformer-in-Transformer based 3D object detection method that effectively addresses multi-scale object detection challenges through a local-global feature coordination mechanism. The core concept models point cloud processing as a set-to-set transformation to better preserve original point cloud information. The designed 3D feature learning module focuses on discovering context-adaptive hidden code combinations by balancing local and global receptive fields. Demonstrating robust performance across both single-stage detection frameworks and extended two-stage architectures, the proposed method achieves accurate identification of multi-scale targets in complex environments while maintaining an effective balance between improved detection accuracy and real-time processing capabilities.
+<img src="diagram.jpg" alt="drawing" width="900" height="400"/>
+Highlights
+ Local-Global Feature Co-Learning Mechanism: Proposes VoxT-DGCNN, integrating Point-Voxel Transformer (PVFormer) and Dynamic Graph CNN (DGcnnFFN), to balance localized receptive fields with adaptive global contexts, addressing multi-scale detection challenges in autonomous driving.
+ Superior Small-Object Detection: Compared with methods that only rely on point clouds and cover at least two types of detection, strong competitive performance has been achieved on KITTI and Waymo open datasets (WOD), especially in small objects, and validated through hierarchical fusion of geometric details and global semantics.
+ Scenario-Specific Optimization: Establishes optimal voxel-K configurations (e.g., V=0.18/K=7 for multi-class scenes) and two-tier deployment strategies: universal model for resource-constrained environments and cascaded specialized detectors for high-compute scenarios.
+ Architectural Synergy Validation: Ablation studies confirm critical contributions of DGcnnFFN, showing 10.76% accuracy drop for small objects when disabled, and full-component removal causing 18.97% AP degradation for pedestrians on WOD.
 
 ### 1. Recommended Environment
 - OpenPCDet Version: 0.5.2
