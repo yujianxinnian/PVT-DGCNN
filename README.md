@@ -6,8 +6,6 @@
     1.The College of Computer and Data Science, Fuzhou University, China
     2.The Academy of Digital China (Fujian), Fuzhou University, China
 
-This project is built on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet). 
-
 ## Introduction
 <img src="diagram.jpg" alt="drawing" width="900" height="400"/>
 
@@ -114,7 +112,7 @@ python test.py --cfg_file --cfg_file ./cfgs/kitti_models/voxt_dgcnn.yaml --ckpt 
 - 2."tools\cfgs\waymo_models\voxt_sgcnn.yaml", "voxt_sgcnn_two_stage_car&cyclist.yaml", and "voxt_ecovgnn_two_stage_pedestrian.yaml" uses static graph convolution (with less latency) for training
 
 ### 7. Acknowledgement
-
-Some codes are from VoxSeT(https://github.com/skyhehe123/VoxSeT).
+- This project is built on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet). 
+- Some codes are from PyG(https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.nn.conv.DynamicEdgeConv.html#torch_geometric.nn.conv.DynamicEdgeConv) and VoxSeT(https://github.com/skyhehe123/VoxSeT).
 
 
