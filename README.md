@@ -29,7 +29,6 @@
 pip install -r requirements.txt
 python setup.py build_ext --inplace 
 ```
-The [torch_geometric, torch_scatter, torch_sparse, torch_cluster, torch_spline_conv](https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html) package is required
 
 
 
