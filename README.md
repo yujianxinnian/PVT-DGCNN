@@ -1,4 +1,4 @@
-## A 3D Object Detection Approach from Point Cloud based on Voxel-level Transformer iN Transformer
+## VoxT-DGCNN：A 3D Object Detection Approach from Point Cloud based on Point-Voxel Transformer and Dynamic Graph CNN
 
 **Authors**: [Qiangwen Wen](https://github.com/yujianxinnian), [Sheng Wu*](http://adcfj.cn/sirc/door/team/TeacherList/Detail?personId=%20422), Jinghui Wei.
 
