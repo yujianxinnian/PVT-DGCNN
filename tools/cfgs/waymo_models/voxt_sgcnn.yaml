@@ -38,7 +38,7 @@ MODEL:
         NAME: VoxtSGCNN
         INPUT_DIM: 16
         NUM_LATENTS: [4, 4, 4, 4] #[16, 16, 16, 16] #[8, 8, 8, 8]
-        K_GNN: 1 #2 #2 #3
+        K_GNN: 5 #1 #2 #2 #3
         GNN_LAYERS: 3
         OUTPUT_DIM: 128
 

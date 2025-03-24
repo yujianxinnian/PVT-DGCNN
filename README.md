@@ -63,33 +63,31 @@ The performance (Best combination，using 11 recall poisitions) on KITTI validat
 		
 Car  AP@0.70, 0.70, 0.70:
 
-3d   AP: 88.52 78.20 77.03
+3d   AP: 89.00 78.63 77.34
 
 Pedestrian AP@0.50, 0.50, 0.50:
 
-3d   AP: 65.76 59.56 53.20
+3d   AP: 66.19 59.24 54.37
 
 Cyclist AP@0.50, 0.50, 0.50:
 
-3d   AP: 85.66 70.07 66.04
+3d   AP: 86.58 69.75 65.92
 ```
-The runtime is about **36 ms** per sample. (RTX 4090 GPU)
 
-
-The performance (using 40 recall poisitions) on the KITTI test set (two-stage).
+The performance (Best combination，using 40 recall poisitions) on the KITTI test set (two-stage).
 In two-stage models are not suitable to directly report results on KITTI test set, please use slightly lower score threshold and train the models on all or 90% training data to achieve a desirable performance on KITTI test set.
 ```
 Car  AP@0.70, 0.70, 0.70:
 
-3D   AP: 90.51 81.74 77.22	
+3D   AP: 90.43 81.61 76.97	
 	
 Pedestrian AP@0.50, 0.50, 0.50:
 
-3D   AP: 50.92 43.87 40.53
+3D   AP: 51.94 44.92 41.73
 
 Cyclist AP@0.50, 0.50, 0.50:
 
-3D   AP: 83.37 68.53 62.13
+3D   AP: 82.57 68.58 61.69
 ```
 Due to the voxel based method, each sampling point is random, so the results may vary during each training or testing.
 
@@ -99,8 +97,8 @@ Due to the voxel based method, each sampling point is random, so the results may
 
 ```shell
 
-cd VoxTNT/tools
-python train.py --cfg_file cfgs/kitti_models/voxt_gnn.yaml
+cd VoxT-DGCNN/tools
+python train.py --cfg_file cfgs/kitti_models/voxt_dgcnn.yaml
 
 
 ```
@@ -108,9 +106,13 @@ python train.py --cfg_file cfgs/kitti_models/voxt_gnn.yaml
 ### 6. Test with a pretrained model
 
 ```shell
-cd VoxTNT/tools
-python test.py --cfg_file --cfg_file ./cfgs/kitti_models/voxt_gnn.yaml --ckpt ${CKPT_FILE}
+cd VoxT-DGCNN/tools
+python test.py --cfg_file --cfg_file ./cfgs/kitti_models/voxt_dgcnn.yaml --ckpt ${CKPT_FILE}
 ```
+### 7. others
+- 1.To address the ultra-scale characteristics of Waymo1.2.0(https://waymo.com/open/) - whose data volume exceeds KITTI by over 20× with per-frame point cloud spatial coverage approximately 6× larger - we implemented optimized trade-offs in experimental design under computational resource constraints. Specifically, we strictly adhered to OpenPCDet(https://github.com/open-mmlab/OpenPCDet) framework conventions by utilizing approximately 20% of all training samples. For performance evaluation, comprehensive testing on the official WOD validation set was conducted, with rigorous computation of both AP and APH following the dual-difficulty-level (L1/L2) evaluation protocol, ensuring the authority and comparability of experimental results.
+- 2."tools\cfgs\waymo_models\voxt_sgcnn.yaml", "voxt_sgcnn_two_stage_car&cyclist.yaml", and "voxt_ecovgnn_two_stage_pedestrian.yaml" uses static graph convolution (with less latency) for training
+
 ### 7. Acknowledgement
 
 Some codes are from VoxSeT(https://github.com/skyhehe123/VoxSeT).
