@@ -22,7 +22,7 @@ from tools.train_utils.train_utils import train_model
 
 def parse_config():
     parser = argparse.ArgumentParser(description='arg parser')
-    parser.add_argument('--cfg_file', type=str, default='./cfgs/kitti_models/voxtnt.yaml', help='specify the config for training')
+    parser.add_argument('--cfg_file', type=str, default='./cfgs/kitti_models/voxt_dgcnn.yaml', help='specify the config for training')
 
     parser.add_argument('--batch_size', type=int, default=2, required=False, help='batch size for training')
     parser.add_argument('--epochs', type=int, default=120, required=False, help='number of epochs to train for')
