@@ -10,11 +10,12 @@ This project is built on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet).
 
 ## Introduction
 <img src="diagram.jpg" alt="drawing" width="900" height="400"/>
-Highlights：
-1.Local-Global Feature Co-Learning Mechanism: Proposes VoxT-DGCNN, integrating Point-Voxel Transformer (PVFormer) and Dynamic Graph CNN (DGcnnFFN), to balance localized receptive fields with adaptive global contexts, addressing multi-scale detection challenges in autonomous driving.
-2.Superior Small-Object Detection: Compared with methods that only rely on point clouds and cover at least two types of detection, strong competitive performance has been achieved on KITTI and Waymo open datasets (WOD), especially in small objects, and validated through hierarchical fusion of geometric details and global semantics.
-3.Scenario-Specific Optimization: Establishes optimal voxel-K configurations (e.g., V=0.18/K=7 for multi-class scenes) and two-tier deployment strategies: universal model for resource-constrained environments and cascaded specialized detectors for high-compute scenarios.
-4.Architectural Synergy Validation: Ablation studies confirm critical contributions of DGcnnFFN, showing 10.76% accuracy drop for small objects when disabled, and full-component removal causing 18.97% AP degradation for pedestrians on WOD.
+
+### Highlights：
+- 1.Local-Global Feature Co-Learning Mechanism: Proposes VoxT-DGCNN, integrating Point-Voxel Transformer (PVFormer) and Dynamic Graph CNN (DGcnnFFN), to balance localized receptive fields with adaptive global contexts, addressing multi-scale detection challenges in autonomous driving.
+- 2.Superior Small-Object Detection: Compared with methods that only rely on point clouds and cover at least two types of detection, strong competitive performance has been achieved on KITTI and Waymo open datasets (WOD), especially in small objects, and validated through hierarchical fusion of geometric details and global semantics.
+- 3.Scenario-Specific Optimization: Establishes optimal voxel-K configurations (e.g., V=0.18/K=7 for multi-class scenes) and two-tier deployment strategies: universal model for resource-constrained environments and cascaded specialized detectors for high-compute scenarios.
+- 4.Architectural Synergy Validation: Ablation studies confirm critical contributions of DGcnnFFN, showing 10.76% accuracy drop for small objects when disabled, and full-component removal causing 18.97% AP degradation for pedestrians on WOD.
 
 ### 1. Recommended Environment
 - OpenPCDet Version: 0.5.2
