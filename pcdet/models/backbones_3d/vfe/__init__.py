@@ -4,9 +4,9 @@ from .dynamic_mean_vfe import DynamicMeanVFE
 from .dynamic_pillar_vfe import DynamicPillarVFE
 from .image_vfe import ImageVFE
 from .vfe_template import VFETemplate
-from .voxt_dgcnn import VoxtDGCNN
-from .voxt_sgcnn_two_stage import Voxt_Sgcnn_Two_Stage
-from .voxt_sgcnn_waymo import VoxtSGCNN
+from .pvt_dgcnn import PVTDGCNN
+from .pvt_sgcnn_two_stage import Pvt_Sgcnn_Two_Stage
+from .pvt_sgcnn_waymo import PVTSGCNN
 
 
 __all__ = {
@@ -16,7 +16,7 @@ __all__ = {
     'ImageVFE': ImageVFE,
     'DynMeanVFE': DynamicMeanVFE,
     'DynPillarVFE': DynamicPillarVFE,
-    'VoxtDGCNN': VoxtDGCNN,
-    'Voxt_Sgcnn_Two_Stage': Voxt_Sgcnn_Two_Stage,
-    'VoxtSGCNN': VoxtSGCNN,
+    'PVTDGCNN': PVTDGCNN,
+    'Pvt_Sgcnn_Two_Stage': Pvt_Sgcnn_Two_Stage,
+    'PVTSGCNN': PVTSGCNN,
 }

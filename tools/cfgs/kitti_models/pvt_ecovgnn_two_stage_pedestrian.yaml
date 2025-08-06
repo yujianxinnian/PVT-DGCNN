@@ -33,7 +33,7 @@ MODEL:
     NAME: PointRCNN
 
     VFE:
-        NAME: Voxt_Sgcnn_Two_Stage
+        NAME: Pvt_Sgcnn_Two_Stage
         INPUT_DIM: 16
         NUM_LATENTS: [8, 8, 8, 8] #[16, 16, 16, 16] #[8, 8, 8, 8]
         K_GNN: 1

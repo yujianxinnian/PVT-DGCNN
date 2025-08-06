@@ -1,19 +1,24 @@
 ## VoxT-DGCNN：A 3D Object Detection Approach from Point Cloud based on Point-Voxel Transformer and Dynamic Graph CNN
 
-**Authors**: [Qiangwen Zheng](https://github.com/yujianxinnian), [Sheng Wu*](http://adcfj.cn/sirc/door/team/TeacherList/Detail?personId=%20422), Jinghui Wei.
+**Authors**: [Qiangwen Zheng](https://github.com/yujianxinnian) 13, Zhijie Wu 13， Dan Zou 13， [Sheng Wu*](http://adcfj.cn/sirc/door/team/TeacherList/Detail?personId=%20422) 2.
 
 **Institution**: 
-    1.The College of Computer and Data Science, Fuzhou University, China
-    2.The Academy of Digital China (Fujian), Fuzhou University, China
+    1. The School of Resource Engineering, Longyan University, Longyan, China; 
+    2. The Academy of Digital China (Fujian), Fuzhou University, Fuzhou, China; 
+    3. Key Laboratory of Safe Mining for Mineral Resources（Longyan University），Fujian Province University, China
+    593161522@qq.com, wzj@lyun.edu.cn, 280324983@qq.com, wusheng@fzu.edu.cn 
+
 
 ## Introduction
 <img src="diagram.jpg" alt="drawing" width="900" height="400"/>
 
 ### Highlights：
-- Local-Global Feature Co-Learning Mechanism: Proposes VoxT-DGCNN, integrating Point-Voxel Transformer (PVFormer) and Dynamic Graph CNN (DGcnnFFN), to balance localized receptive fields with adaptive global contexts, addressing multi-scale detection challenges in autonomous driving.
-- Superior Small-Object Detection: Compared with methods that only rely on point clouds and cover at least two types of detection, strong competitive performance has been achieved on KITTI and Waymo open datasets (WOD), especially in small objects, and validated through hierarchical fusion of geometric details and global semantics.
-- Scenario-Specific Optimization: Establishes optimal voxel-K configurations (e.g., V=0.18/K=7 for multi-class scenes) and two-tier deployment strategies: universal model for resource-constrained environments and cascaded specialized detectors for high-compute scenarios.
-- Architectural Synergy Validation: Ablation studies confirm critical contributions of DGcnnFFN, showing 10.76% accuracy drop for small objects when disabled, and full-component removal causing 18.97% AP degradation for pedestrians on WOD.
+- （1）Hybrid Architecture
+PVT-DGCNN unifies PVFormer (local voxel attention) and DGcnnFFN (global graph convolution) for joint local-global feature learning, tackling fixed-receptive-field limitations.
+- （2）Dynamic Scaling
+Adapts to object sizes by tuning K-values in graph construction: large K for sparse areas (context expansion), small K for dense zones (local focus), e.g., K=7 for pedestrians vs. K=3 for cars.
+- （3）Small-Object Breakthrough
+Achieves SOTA on small objects: +4.70 pedestrian AP (KITTI Easy), 75.87% L1-AP (Waymo), via interference-resistant local-global feature fusion.
 
 ### 1. Recommended Environment
 - OpenPCDet Version: 0.5.2

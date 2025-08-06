@@ -35,7 +35,7 @@ MODEL:
     NAME: PointPillar
 
     VFE:
-        NAME: VoxtSGCNN
+        NAME: PVTSGCNN
         INPUT_DIM: 16
         NUM_LATENTS: [4, 4, 4, 4] #[16, 16, 16, 16] #[8, 8, 8, 8]
         K_GNN: 5 #1 #2 #2 #3

@@ -28,7 +28,7 @@ class MLP(nn.Module):
             x = F.relu(layer(x)) if i < self.num_layers - 1 else layer(x)
         return x
 
-class Voxt_Sgcnn_Two_Stage(VFETemplate):
+class Pvt_Sgcnn_Two_Stage(VFETemplate):
     def __init__(self, model_cfg, num_point_features, voxel_size, point_cloud_range, grid_size, **kwargs):
         super().__init__(model_cfg=model_cfg)
 

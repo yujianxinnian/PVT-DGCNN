@@ -66,7 +66,7 @@ MODEL:
     NAME: VoxelRCNN
     
     VFE:
-        NAME: Voxt_Sgcnn_Two_Stage
+        NAME: Pvt_Sgcnn_Two_Stage
         INPUT_DIM: 16
         NUM_LATENTS: [8, 8, 8, 8] #[8, 8, 8, 8] #[16, 16, 16, 16] #[8, 8, 8, 8]
         K_GNN: 10 #10 #9 #8 #1 #2 #3 #4 #5 #6 #7
