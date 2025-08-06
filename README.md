@@ -14,7 +14,7 @@
     Point Clouds; 3D Object Detection; Multi-scale Objects; Transformer; Graph Neural Network
 
 ## Introduction
-<img src="diagram.jpg" alt="drawing" width="900" height="400"/>
+<img src="diagram.png" alt="drawing" width="900" height="400"/>
 
 ### Highlights：
 - （1）Hybrid Architecture
