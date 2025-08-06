@@ -104,7 +104,7 @@ Due to the voxel based method, each sampling point is random, so the results may
 ```shell
 
 cd VoxT-DGCNN/tools
-python train.py --cfg_file cfgs/kitti_models/voxt_dgcnn.yaml
+python train.py --cfg_file cfgs/kitti_models/pvt_dgcnn.yaml
 
 
 ```
@@ -113,7 +113,7 @@ python train.py --cfg_file cfgs/kitti_models/voxt_dgcnn.yaml
 
 ```shell
 cd VoxT-DGCNN/tools
-python test.py --cfg_file --cfg_file ./cfgs/kitti_models/voxt_dgcnn.yaml --ckpt ${CKPT_FILE}
+python test.py --cfg_file --cfg_file ./cfgs/kitti_models/pvt_dgcnn.yaml --ckpt ${CKPT_FILE}
 ```
 ### 7. others
 - To address the ultra-scale characteristics of Waymo1.2.0(https://waymo.com/open/) - whose data volume exceeds KITTI by over 20× with per-frame point cloud spatial coverage approximately 6× larger - we implemented optimized trade-offs in experimental design under computational resource constraints. Specifically, we strictly adhered to OpenPCDet(https://github.com/open-mmlab/OpenPCDet) framework conventions by utilizing approximately 20% of all training samples. For performance evaluation, comprehensive testing on the official WOD validation set was conducted, with rigorous computation of both AP and APH following the dual-difficulty-level (L1/L2) evaluation protocol, ensuring the authority and comparability of experimental results.
