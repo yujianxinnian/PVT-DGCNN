@@ -1,18 +1,3 @@
-## PVT-DGCNN：A Multi-scale 3D Object Detection Approach from Point Cloud for Autonomous Driving based on Point-Voxel Transformer and Dynamic Graph CNN
-
-**Authors**: [Qiangwen Zheng](https://github.com/yujianxinnian) 13, Zhijie Wu* 13， Dan Zou 13， [Sheng Wu](http://adcfj.cn/sirc/door/team/TeacherList/Detail?personId=%20422) 2.
-
-**Institution**: 
--    1. The School of Resource Engineering, Longyan University, Longyan, China; 
--    2. The Academy of Digital China (Fujian), Fuzhou University, Fuzhou, China; 
--    3. Key Laboratory of Safe Mining for Mineral Resources（Longyan University），Fujian Province University, China
--     593161522@qq.com, wzj@lyun.edu.cn, 280324983@qq.com, wusheng@fzu.edu.cn 
-
-**Abstract**: 
-    The core challenges in multi-scale 3D object detection from LiDAR point clouds for autonomous driving lie in: ①The difficulty for fixed-scale receptive fields to effectively capture objects with drastically varying sizes (e.g., cars vs. pedestrians); ② The susceptibility of traditional feature fusion methods (e.g., FPN) to mutual interference between features of different objects in complex backgrounds, leading to geometric and semantic confusion. To address these challenges, we propose PVT-DGCNN, a novel point cloud 3D object detection framework tailored for multi-scale variations. PVT-DGCNN models point cloud processing as a set-to-set transformation. Its core is a local-global feature co-learning backbone network that effectively combines balanced local receptive fields with adaptive global receptive fields, significantly enhancing detection performance in complex scenes. PVT-DGCNN comprises two key components: PVFormer (Point-Voxel Transformer) and DGcnnFFN (Dynamic Graph CNN Feed-Forward Network). PVFormer establishes local geometric relationships within voxel regions, extracting fine-grained local features via a streamlined cross-attention mechanism. DGcnnFFN, conversely, constructs global contextual associations between non-empty voxels, enabling cross-voxel (cross-scale) feature interaction using a Dynamic Graph Convolutional Network. Crucially, by embedding DGcnnFFN into the intermediate layers of the PVFormer encoder-decoder architecture, the system achieves progressive fusion of local details and global semantics. This hierarchical design effectively mitigates the issue of small object features being easily disturbed by leveraging the adaptive global receptive field mechanism, while striving to preserve the original point cloud's local geometric structure. Extensive experimental results on the major benchmark datasets KITTI and Waymo Open Dataset demonstrate that our proposed method exhibits competitive performance compared to state-of-the-art baselines under both single-stage and two-stage detection frameworks. Notably, the improvement is particularly significant for small object detection. PVT-DGCNN achieves the highest mean Average Precision (mAP) of 66.71% on the KITTI benchmark across the Car, Pedestrian, and Cyclist categories. Ablation studies further confirm that the local-global feature co-learning mechanism, integrating balanced local receptive fields and adaptive global receptive fields, significantly enhances small object detection accuracy while maintaining robustness for large object detection. In conclusion, this study provides a novel approach to tackling the multi-scale object detection challenge in autonomous driving. Future work will focus on optimizing the model architecture for further efficiency and performance gains.
-## Keywords
-    Point Clouds; 3D Object Detection; Multi-scale Objects; Transformer; Graph Neural Network
-
 ## Introduction
 <img src="diagram.png" alt="drawing" width="900" height="400"/>
 
