@@ -3,7 +3,7 @@
 
 ### Highlights：
 - （1）Hybrid Architecture
-PVT-DGCNN unifies PVFormer (local voxel attention) and DGcnnFFN (global graph convolution) for joint local-global feature learning, tackling fixed-receptive-field limitations.
+K-LGNet unifies PVFormer (local voxel attention) and DGcnnFFN (global graph convolution) for joint local-global feature learning, tackling fixed-receptive-field limitations.
 - （2）Dynamic Scaling
 Adapts to object sizes by tuning K-values in graph construction: large K for sparse areas (context expansion), small K for dense zones (local focus), e.g., K=7 for pedestrians vs. K=3 for cars.
 - （3）Small-Object Breakthrough
